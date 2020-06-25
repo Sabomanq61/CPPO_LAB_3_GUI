@@ -17,7 +17,7 @@ std::shared_ptr<ExplorerStrategy::FileList> StrategyFolder::Explore(const QStrin
 
         QDir dir(path);
 
-        for(QFileInfo it : dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot, QDir::Type))
+        for(QFileInfo it : dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot | QDir::Dirs, QDir::Type))
         {
             uint64_t size = Size(it.absoluteFilePath());
             total_size += size;
@@ -26,7 +26,7 @@ std::shared_ptr<ExplorerStrategy::FileList> StrategyFolder::Explore(const QStrin
 
         for(auto& it : *dirInfo)
         {
-            it.percent_ = QString::number(it.size_.toFloat() / total_size);
+            it.percent_ = QString::number(it.size_.toFloat() / total_size,'g', 4) + '%';
         }
 
         return dirInfo;
