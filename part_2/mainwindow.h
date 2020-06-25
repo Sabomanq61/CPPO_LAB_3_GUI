@@ -17,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 private slots:
 
-    void on_selectionChangedSlot(const QItemSelection &selected, const QItemSelection &deselected){}
+    void on_selectionChangedSlot(const QItemSelection &selected, const QItemSelection &deselected);
     void on_group_bottom(const int& type);
 
 public:
@@ -25,9 +25,6 @@ public:
     ~MainWindow();
 private:
     Ui::MainWindow* ui_window;
-
     QFileSystemModel *fileModel;
-    InfoModel* tableModel;
-    ExplorerStrategy* explore;
 };
 
