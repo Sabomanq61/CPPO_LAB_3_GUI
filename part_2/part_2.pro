@@ -20,7 +20,6 @@ SOURCES += \
     infomodel.cpp \
     main.cpp \
     mainwindow.cpp \
-    strategy.cpp \
     type_strategy.cpp
 
 HEADERS += \
