@@ -23,7 +23,7 @@ SOURCES += \
     type_strategy.cpp
 
 HEADERS += \
-    dir_info.h \
+    file_info.h \
     folder_strategy.h \
     infomodel.h \
     mainwindow.h \
