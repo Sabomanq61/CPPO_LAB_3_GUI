@@ -6,11 +6,12 @@
 class StrategyFolder : public ExplorerStrategy
 {
 public:
+    ///@brief Конструктор по умолчанию
     StrategyFolder() = default;
 
-    /// @brief
+
     /// parh путь к директории
-    /// return
+    /// return умный указатель на vector<FileInfo> = FileList
     std::shared_ptr<FileList> Explore(const QString& path) const override;
 
     //Подсчет размера объекта

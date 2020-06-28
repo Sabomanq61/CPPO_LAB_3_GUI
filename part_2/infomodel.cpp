@@ -1,6 +1,7 @@
 #include "infomodel.h"
 
-const int numberColumn = 3;
+// Число столбцов
+const int namberColumn = 3;
 
 int InfoModel::rowCount(const QModelIndex &parent) const
 {
@@ -13,12 +14,7 @@ int InfoModel::rowCount(const QModelIndex &parent) const
 int InfoModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    return numberColumn;
-}
-
-void InfoModel::SetInfo(std::shared_ptr<ExplorerStrategy::FileList> pointer)
-{
-    pointerData_ = pointer;
+    return namberColumn;
 }
 
 QVariant InfoModel::headerData(int section, Qt::Orientation orientation, int role) const
